@@ -289,13 +289,13 @@ public class Game {
 
     private void listenReady() {
         Timer connectTimer;
-        connectTimer = new Timer(500, new ActionListener() {
+        connectTimer = new Timer(200, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {// 使用 BFS 進行每次水管流向的確認
                 if (friendReady && enemyReady) {
-                    start();
                     friendReady = false;
                     enemyReady = false;
+                    start();
                 }
             }
         });

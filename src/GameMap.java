@@ -178,6 +178,7 @@ public class GameMap {
     }
 
     public void check() {
+        stopClick();
         System.out.println("checking");
         startFlow();
     }
