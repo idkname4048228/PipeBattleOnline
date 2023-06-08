@@ -2,6 +2,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.InetSocketAddress;
 import java.net.Socket;
+import java.util.Scanner;
 import java.io.IOException;
 
 import javax.swing.SwingWorker;
@@ -61,6 +62,10 @@ public class Client {
     }
 
     public void start() {
+
+        Scanner sc = new Scanner(System.in);
+        address = sc.nextLine();
+        sc.close();
 
         SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
             @Override

@@ -108,6 +108,7 @@ public class Game {
                         gameMap.pipeMap.get(rowIndex).get(colIndex).init();
                     }
                 }
+
             }
         });
 
@@ -259,6 +260,8 @@ public class Game {
         round.stop();
         friendReady = true;
         this.sendStr += "ready ";
+        
+        JOptionPane.showMessageDialog(mainPanel, "Waiting for enemy ready.", "waiting", JOptionPane.PLAIN_MESSAGE);
     }
 
     public String getSendStr() {

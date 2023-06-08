@@ -1,5 +1,5 @@
 public class Shop {
-    int currentMoney = 50;
+    int currentMoney = 20;
 
     int[] increasePrice = new int[] { 10, 10, 10, 5 };
     int[] pipePrice = new int[] { 10, 10, 15, 20 };

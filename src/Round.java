@@ -43,7 +43,7 @@ public class Round {
     public void start() {
         if (nowRound >= 9)
             return;
-        remainSecond += nowRound * 0.5;
+        remainSecond += nowRound * 3;
         nowRound++;
         initTimer();
         SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
