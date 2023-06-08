@@ -51,6 +51,10 @@ public class Client {
 
     public Client() {
 
+        Scanner sc = new Scanner(System.in);
+        address = sc.nextLine();
+        sc.close();
+
         client = new Socket();
         InetSocketAddress isa = new InetSocketAddress(this.address, this.port);
         try {
@@ -62,10 +66,6 @@ public class Client {
     }
 
     public void start() {
-
-        Scanner sc = new Scanner(System.in);
-        address = sc.nextLine();
-        sc.close();
 
         SwingWorker<Void, Void> worker = new SwingWorker<Void, Void>() {
             @Override
