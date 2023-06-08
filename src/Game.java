@@ -258,10 +258,11 @@ public class Game {
 
     public void ready() {
         round.stop();
+        if (friendReady)
+            return;
         friendReady = true;
         this.sendStr += "ready ";
-        
-        JOptionPane.showMessageDialog(mainPanel, "Waiting for enemy ready.", "waiting", JOptionPane.PLAIN_MESSAGE);
+        controlPanel.updateRound(11);
     }
 
     public String getSendStr() {

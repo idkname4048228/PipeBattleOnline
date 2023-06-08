@@ -178,7 +178,9 @@ public class GameControlPanel extends JPanel {
     }
 
     public void updateRound(int round) {
-        if (round == 10) {
+        if (round == 11) {
+            roundLabel.setText("Waiting enemy ready");
+        } else if (round == 10) {
             roundLabel.setText("Checking");
         } else {
             roundLabel.setText("Round: " + round);
