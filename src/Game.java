@@ -262,7 +262,7 @@ public class Game {
             return;
         friendReady = true;
         this.sendStr += "ready ";
-        controlPanel.updateRound(11);
+        controlPanel.updateRound(-1);
     }
 
     public String getSendStr() {
@@ -270,8 +270,8 @@ public class Game {
     }
 
     public void start() {
-        if (round.nowRound >= 9) {
-            controlPanel.updateRound(10);
+        if (round.nowRound >= 5) {
+            controlPanel.updateRound(0);
             check();
             return;
         }

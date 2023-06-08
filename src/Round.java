@@ -41,7 +41,7 @@ public class Round {
     }
 
     public void start() {
-        if (nowRound >= 9)
+        if (nowRound >= 5)
             return;
         remainSecond += nowRound * 3;
         nowRound++;
